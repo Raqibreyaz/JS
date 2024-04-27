@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .box {
+            height: 10vh;
+            width: 40vw;
+            background-color: white;
+            border: 1px solid gray;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            padding: 2vmin;
+            position: relative;
+        }
+
+        .circle {
+            height: 19vmin;
+            width: 19vmin;
+            background-color: aqua;
+            border-radius: 100%;
+            position: absolute;
+            left: 0;
+            transition: all cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="circle"></div>
+    </div>
+    <script>
+
+        let box = document.querySelector('.box')
+        let circle = document.querySelector('.circle')
+
+        let clicked = false
+
+        box.addEventListener('click', (e) => {
+
+            box.style.backgroundColor = clicked ? 'transparent' : 'aqua';
+            circle.style.backgroundColor = clicked ? 'aqua' : 'red';
+            circle.style.left = (clicked ? '' : (100 - circle.clientWidth) + '%') 
+
+            clicked = !clicked;
+        }
+        )
+    </script>
+</body>
+
+</html>

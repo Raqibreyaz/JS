@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        :root {
+            --opacity: 0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            background-color: red;
+        }
+
+        .seek-bar {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .bar {
+            width: 70%;
+            height: 5px;
+            background-color: gray;
+            border-radius: 5px;
+            position: relative;
+            cursor: pointer
+        }
+
+        .circle {
+            height: 13px;
+            width: 13px;
+            position: absolute;
+            left: 0px;
+            background-color: white;
+            bottom: -3px;
+            border-radius: 100%;
+        }
+
+        .second {
+            height: 40%;
+            width: 40%;
+            background-color: blanchedalmond;
+            position: relative;
+
+        }
+
+        .second:hover {
+            --opacity:1
+        }
+
+        .second-circle {
+            height: 14px;
+            width: 14px;
+            background-color: slategrey;
+            border-radius: 100%;
+            position: absolute;
+            opacity: var(--opacity);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="seek-bar">
+        <span class="time">00:00</span>
+        <div class="bar">
+            <span class="circle"></span>
+        </div>
+        <span class="duration">00:00</span>
+    </div>
+    <div class="second">
+   
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

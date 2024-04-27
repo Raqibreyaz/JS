@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 50px;
+            width: 50px;
+            margin: 20px;
+            border: 1px solid black;
+ /* background-color: rgb(255, 255, 255); */
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box">Box</div>
+    <div class="box">Box</div>
+    <div class="box">Box</div>
+    <div class="box">Box</div>
+    <div class="box">Box</div>
+    <script>
+        let color=()=>{
+    const r=Math.floor(Math.random()*(255-0+1));
+    const g=Math.floor(Math.random()*(255-0+1));
+    const b=Math.floor(Math.random()*(255-0+1));
+
+    return `rgb(${r},${g},${b})`;
+}
+
+let boxes=document.getElementsByClassName("box");
+
+for(let i=0;i<=5;i++){
+    boxes[i].style.backgroundColor=color();
+    boxes[i].style.color=color();
+}
+    </script>
+</body>
+</html>
